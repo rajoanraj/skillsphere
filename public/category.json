@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "Advanced React & Next.js",
+    "instructor": "Jane Smith",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Emily Johnson",
+    "category": "Design"
+  },
+  {
+    "id": 4,
+    "title": "Digital Marketing Mastery",
+    "instructor": "Michael Brown",
+    "category": "Marketing"
+  },
+  {
+    "id": 5,
+    "title": "Python for Beginners",
+    "instructor": "David Wilson",
+    "category": "Programming"
+  },
+  {
+    "id": 6,
+    "title": "Data Science & Machine Learning",
+    "instructor": "Sophia Lee",
+    "category": "Data Science"
+  }
+]
