@@ -1,7 +1,7 @@
 import CoursesCard from "./CoursesCard";
 
 const TopCourses = async () => {
-    const res = await fetch("http://localhost:3000/data.json");
+    const res = await fetch("/data.json");
     const courses = await res.json();
    const topCourses = courses.slice(0, 6);
     return (
