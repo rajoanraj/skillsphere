@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Chip } from "@heroui/react";
+import { Button, Card, Chip, Link } from "@heroui/react";
 import Image from "next/image";
 import { FcRating } from "react-icons/fc";
 
@@ -32,9 +32,11 @@ const CoursesCard = ({ course }) => {
           <p className="text-gray-600">{course.rating}</p>
         </div>
         </div>
-        <Button variant="outline" className="w-full">
-          View Details
-        </Button>
+        <Link href={`/all-courses/${course.id}`}>
+          <Button className="w-full mt-2" color="primary">
+            View Details
+          </Button>
+        </Link>
       </Card>
     );
 };
