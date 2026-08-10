@@ -1,7 +1,7 @@
 import CoursesCard from "@/components/CoursesCard";
 const AllCourses = async () => {
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-  const res = await fetch(`${baseUrl}/data.json`);
+  const res = await fetch(`${baseUrl}/data.json`,{ cache: 'no-store' });
   const courses = await res.json();
     return (
         <div>
