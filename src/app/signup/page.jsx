@@ -1,6 +1,7 @@
 "use client";
 import { Check } from "@gravity-ui/icons";
 import { authClient } from "@/lib/authClient";
+import { useRouter } from "next/navigation";
 import {
   Button,
   Card,
@@ -13,6 +14,8 @@ import {
 } from "@heroui/react";
 
 export default function SignUpPage() {
+
+  const route = useRouter()
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -28,6 +31,10 @@ export default function SignUpPage() {
     }) 
 
     console.log(data, error);
+
+    if(!error) {
+      route.push('/')
+    }
   };
 
   return (

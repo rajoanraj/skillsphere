@@ -2,7 +2,7 @@ import CoursesCard from "./CoursesCard";
 
 const TopCourses = async () => {
     const res = await fetch(
-      "https://skillsphere-virid.vercel.app/data.json",
+      "http://localhost:3000/data.json",
       { cache: "no-store" },
     );
     const data = await res.json();
