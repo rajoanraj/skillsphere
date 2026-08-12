@@ -1,11 +1,16 @@
+import Category from "@/components/Category";
 import CoursesCard from "@/components/CoursesCard";
 const AllCourses = async () => {
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+const baseUrl = process.env.NODE_ENV === "development" 
+? "http://localhost:3000" :`https://${process.env.VERCEL_URL || "skillsphere-virid.vercel.app"}`;
   const res = await fetch(`${baseUrl}/data.json`,{ cache: 'no-store' });
   const courses = await res.json();
+
+
     return (
         <div>
             <div className="text-2xl font-bold my-5">All Courses</div>
+            <Category />
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {courses.map((course) => (
                     <CoursesCard key={course.id} course={course} />
