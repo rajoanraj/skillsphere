@@ -1,8 +1,10 @@
 import Category from "@/components/Category";
 import CoursesCard from "@/components/CoursesCard";
 const AllCourses = async () => {
-const baseUrl = process.env.NODE_ENV === "development" 
-? "http://localhost:3000" :`https://${process.env.VERCEL_URL || "skillsphere-virid.vercel.app"}`;
+const baseUrl =
+  process.env.NODE_ENV === "development"
+    ? "https://skillsphere-virid.vercel.app/data.json"
+    : `https://${process.env.VERCEL_URL || "skillsphere-virid.vercel.app"}`;
   const res = await fetch(`${baseUrl}/data.json`,{ cache: 'no-store' });
   const courses = await res.json();
 
