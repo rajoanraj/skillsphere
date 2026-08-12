@@ -18,7 +18,7 @@ const ProfilePage = () => {
       <Card className="max-w-96 mx-auto flex flex-col items-center border mt-5">
         <Avatar className="h-20 w-20">
           <Avatar.Image
-            src={user?.avatar_url || "https://via.placeholder.com/150"}
+            src={user?.avatar_url || "https://skillsphere-virid.vercel.app/"}
             alt="User Avatar"
           />
           <Avatar.Fallback>
@@ -27,7 +27,7 @@ const ProfilePage = () => {
         </Avatar>
         <h2 className="text-lg font-semibold">{user?.name || user?.email}</h2>
         <p className="text-gray-500">{user?.email}</p>
-       <UpdateInformationModal />
+        <UpdateInformationModal />
       </Card>
     </div>
   );
