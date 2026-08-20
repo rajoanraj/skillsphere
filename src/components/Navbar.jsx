@@ -47,8 +47,9 @@ return (
                 <Avatar.Image
                   src={user?.avatar_url || "https://via.placeholder.com/150"}
                   alt="User Avatar"
+                  referrerPolicy="no-referrer"
                 /> 
-                <Avatar.Fallback>{user?.email?.charAt(0).toUpperCase()}</Avatar.Fallback>
+                <Avatar.Fallback>{user?.email?.charAt(0)?.toUpperCase()}</Avatar.Fallback>
               </Avatar>
              <Button onClick={handleLogout} size='sm' variant='danger'>Logout</Button>
             
