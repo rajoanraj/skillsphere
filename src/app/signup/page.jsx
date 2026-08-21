@@ -33,7 +33,7 @@ export default function SignUpPage() {
     console.log(data, error);
 
     if(!error) {
-      route.push('/')
+      route.push('/signin')
     }
   };
 
